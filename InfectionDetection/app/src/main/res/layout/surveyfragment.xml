@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Do you feel sick today?"
+        android:id="@+id/textView"
+        android:layout_marginTop="56dp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal"
+        android:id="@+id/linearLayout">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/survey_yes"
+            android:layout_alignTop="@+id/survey_no"
+            android:layout_toLeftOf="@+id/survey_no"
+            android:layout_toStartOf="@+id/survey_no"
+            android:src="@drawable/survey_y" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/survey_no"
+            android:src="@drawable/survey_n"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="50dp" />
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable Location Tracking While Sick"
+        android:id="@+id/track_cb"
+        android:layout_marginTop="69dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enabling location tracking gives us the ability to create better data sets for virtualizations which benefits everyone. If location tracking is enabled your location will be reported once every day. Please note, pressing yes to the above question will cause you location to be reported once regardless of this option."
+        android:id="@+id/textView2"
+        android:layout_below="@+id/track_cb"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+</RelativeLayout>
